@@ -1,8 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
 }
 
 html{
@@ -22,7 +21,6 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    padding: 5px 0;
     display: inline-block;
     margin: 15px 10px;
     color: white;
@@ -30,6 +28,12 @@ nav ul li a{
     text-transform: uppercase;
     border-bottom: 3px solid transparent;
     transition: all 0.25s ease-in-out;
+}
+
+.listItems li a:after{
+    content: '>';
+    margin-left: 0.45rem;
+    position:absolute;
 }
 
 nav ul li a:hover{
@@ -57,23 +61,23 @@ section p{
 }
 
 section:nth-of-type(1){
-    background-image: url(imagens-math/img01.jpeg);
+    background-image: url(assets/imagens-math/img01.jpeg);
 }
 
 section:nth-of-type(2){
-    background-image: url(imagens-math/img02.jpeg);
+    background-image: url(assets/imagens-math/img02.jpeg);
 }
 
 section:nth-of-type(3){
-    background-image: url(imagens-math/img03.jpeg);
+    background-image: url(assets/imagens-math/img03.jpeg);
 }
 
 section:nth-of-type(4){
-    background-image: url(imagens-math/img04.jpeg);
+    background-image: url(assets/imagens-math/img04.jpeg);
 }
 
 section:nth-of-type(5){
-    background-image: url(imagens-math/img05.jpeg);
+    background-image: url(assets/imagens-math/img05.jpeg);
 }
 
 .box{
@@ -85,6 +89,7 @@ section:nth-of-type(5){
 
 fieldset{
     border: 1px solid white;
+    padding: 1rem;
 }
 
 legend{
@@ -141,4 +146,24 @@ legend{
     font-size: 15px;
     cursor: pointer;
     border-radius: 10px;
+}
+
+@media (max-width:768px) {
+    #home{
+        text-align: center;
+    }
+    p{
+        width: 90%;
+    }
+
+    fieldset{
+        padding: 1rem;
+    }
+}
+
+@media (max-width:375px) {
+    .listItems li a{
+        font-size: 0.55rem;
+        width: 100%;
+    }
 }
